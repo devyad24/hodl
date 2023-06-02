@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HodlInfo</title>
+    <script src="https://kit.fontawesome.com/b5fd952f98.js" crossorigin="anonymous"></script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   <div class="container">
+    <header>
+        <div class="logo">HODLINFO</div>
+        <div class="btuns">
+            <button>INR</button><button>BTC</button><button>BUY BTC</button>
+        </div>
+        <div class="connect-tele"><button><i class="fa-brands fa-telegram"></i>Connect Telegram</button></div>
+    </header>
+    <section>
+      <div>
+        <p class="first">0.21%</p>
+        <p class="second">5 Mins</p>
+      </div> 
+      <div>
+        <p class="first">0.36%</p>
+        <p class="second">1 Hour</p>
+      </div> 
+      <div class="net-price">
+        <p>Best Price to Trade</p>
+        <p><i class="fa-solid fa-indian-rupee-sign"></i>24,59,564</p>
+        <p>Average BTC/INR net price including commission</p>
+      </div> 
+      <div>
+        <p class="first">4.13%</p>
+        <p class="second">1 Day</p>
+      </div> 
+      <div>
+        <p class="first">13.77%</p>
+        <p class="second">7 Days</p>
+      </div> 
+    </section>
+    <main>
+        <div class="head-row">
+            <p>#</p>
+            <p>Platform</p>
+            <p>Last Traded Price</p>
+            <p>Buy / Sell Price</p>
+            <p>Difference</p>
+            <p>Savings</p>
+        </div>
+        <div class="child-rows">
+            
+                <% bitcoin_data.forEach(function(btc, index) { %>
+                    <div>
+                    <p><%= index + 1 %></p>
+                    <p><%= btc.name %></p>
+                    <p><i class="fa-solid fa-indian-rupee-sign"></i><%= btc.last %></p>
+                    <p class="difference"><i class="fa-solid fa-indian-rupee-sign"></i><%= btc.buy %> / <i class="fa-solid fa-indian-rupee-sign"></i><%= btc.sell %></p>
+                    <p>14.59%</p>
+                    <p class="savings"><i class="fa-solid fa-indian-rupee-sign"></i>3,45,777</p>
+                    </div>
+                <% }); %>
+
+        </div>
+    </main>
+   </div> 
+</body>
+</html>
